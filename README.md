@@ -5,10 +5,46 @@
 ### PZ卡：  
 - name:PZCard   
 - attributes:   
-  - CardType
-  - Dist
-  - FPload
-  - FQload
-  - FPgen
-  - FQgen
-  - FOwner
+  - CardType:str
+  - Dist:str
+  - FPload:str
+  - FQload:str
+  - FPgen:str
+  - FQgen:str
+  - FOwner:str(如果不填所有者，所有者是三个空字符)
+  - gen():str(返回该卡片的字符串，可以直接复制到bap软件中使用)
+### B0卡：
+- name:B0(该卡为B类卡片的父类)
+- attributes:
+  - Owner:str
+  - Bus_name:str
+  - Vol_Rank:str
+  - Dist:str
+  - Mw_load:str
+  - Mvar_load:str
+  - Shunt_Mw:str
+  - Shunt_var:str
+  - Capacity:str
+  - Pout:str
+  - Qout:str
+  - Qout_min:str
+  - Vmax_pu:str
+  - Vmin_pu:str
+  - gen():str(返回该卡片的字符串，可以直接复制到bap软件中使用)
+  - Mw_load,Mvar_load,Shunt_Mw,Shunt_var,Capacity,Pout,Qout,Qout_min,Vmax_pu,Vmin_pu其中任何一个填的不是数字的话，会被认为填写有误
+ ### B卡： 
+ - name:BCard
+ - attributes:
+   - CardType：str
+   - 其余与B0卡相同
+ ### BQ卡： 
+ - name:BQCard
+ - attributes:
+   - CardType：str
+   - 其余与B0卡相同
+ ### BE卡： 
+ - name:BECard
+ - attributes:
+   - CardType：str
+   - 其余与B0卡相同
+  
