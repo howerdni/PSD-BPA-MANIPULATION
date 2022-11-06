@@ -141,7 +141,7 @@
 In: import BPA_data_manipulation as Bdm
 In: Bdm.Power_Flow_SUM_GT500()
 Out:
-     	Bus1	Voltage1	Bus2	Voltage2	Parallel	Dist1	Dist2	Power_flow	Ploss	Voltage_r
+     	Bus1	Voltage1	Bus2 Voltage2 Parallel	Dist1	Dist2	Power_flow	Ploss	Voltage_r
     0	国芜湖B1	525.0	国芜湖1_	525.0	1		GD	473.6	0.046	522.25
     1	国芜湖B1	525.0	国芜湖_1	115.0	1		GD	0.0	0.000	522.25
     2	国芜湖B1	525.0	国芜湖__	1050.0	1		GD	-473.6	0.682	522.25
@@ -199,7 +199,30 @@ Out:
     17685	浙丽西__	525.0	闽宁德51	525.0	1	L	M9	-393.0	3.080	511.65
     17687	浙丽西__	525.0	闽宁德51	525.0	2	L	M9	-389.1	4.067	511.65
 ```
- filedata,B,BQ,BE,T,L,PZ=Bdm.create_Card_Obj()
+- 以下例子为统计浙江省电力受入总量
+``` 
+In:
+    #统计出力
+    filedata,B,BQ,BE,T,L,PZ=Bdm.create_Card_Obj()
+    GEN=0
+    GEN1=0
+    for i in BQ:
+        for j in PZ:
+            if (i.CardType=='BQ') & ((i.Dist.strip() in ["ct","Ct","cc","cr","c1","c2","c3","C","C5","C6","C7","H","JX","HZ","N","S","J","Q","L","T","W","ZS"])) & (j.Dist.strip() ==  i.Dist.strip()):
+                n=float(i.Pout)*float(j.FPgen)
+                GEN=GEN+n
+    
+    for i in BQ:
+        for j in PZ:
+            if (i.CardType=='BQ') & ((i.Dist.strip() in ["HD"])) & (j.Dist.strip() ==  i.Dist.strip()) & (j.FOwner.strip() ==  i.Owner.strip()) & (i.Owner.strip() in ["H1","H2","H7"]):
+                n=float(i.Pout)*float(j.FPgen)
+                GEN1=GEN1+n
+    #全浙江网络送出潮流（本地机组+华东机组-负荷-网损+直流）
+    GEN+GEN1-(load_BQ+load_B+load_BQHD)*1.008+7660*2+7660*2*1/3
+Out:
+    -6159.581141778069
+```
+ 
 
 
 
