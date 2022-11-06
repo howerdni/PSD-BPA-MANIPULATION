@@ -5,10 +5,10 @@
 ### PZ卡：  
 - name:PZCard   
 - attributes:   
- - CardType
- - Dist
- - FPload
- - FQload
- - FPgen
- - FQgen
- - FOwner
+  - CardType
+  - Dist
+  - FPload
+  - FQload
+  - FPgen
+  - FQgen
+  - FOwner
