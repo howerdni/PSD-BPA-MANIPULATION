@@ -127,10 +127,34 @@
  - 选择一个dat文件，返回值如下：
  ```return fdat_data,Obj_Bcards,Obj_BQcards,Obj_BEcards,Obj_Tcards,Obj_Lcards,Obj_PZcards```
  - 注意：其中有发电能力的B卡被放在了```Obj_BQcards```变量中，B卡只包含无发电能力的B卡
-  ### create_swiCard_Obj()
+ ### create_swiCard_Obj()
  - 选择一个swi文件，返回值如下：
  - ```return Obj_X0cards,Obj_XRcards```
-
+ ### Power_Flow_SUM_GT500()
+ - 选择pfo文件，输出一个pandas.DataFrame类型的表格，包含线路节点名字，线路电压等级，分区，潮流，网损，电压等信息
+ - 输出范围为500kV和1000kV电压等级的线路
+ ### Power_Flow_SUM_220()
+ - 选择pfo文件，输出一个pandas.DataFrame类型的表格，包含线路节点名字，线路电压等级，分区，潮流，网损，电压等信息
+ - 输出范围为220kV电压等级的线路
+ ## 使用实例
+ ```
+ import BPA_data_manipulation as Bdm
+ Bdm.Power_Flow_SUM_GT500()
+ 	Bus1	Voltage1	Bus2	Voltage2	Parallel	Dist1	Dist2	Power_flow	Ploss	Voltage_r
+0	国芜湖B1	525.0	国芜湖1_	525.0	1		GD	473.6	0.046	522.25
+1	国芜湖B1	525.0	国芜湖_1	115.0	1		GD	0.0	0.000	522.25
+2	国芜湖B1	525.0	国芜湖__	1050.0	1		GD	-473.6	0.682	522.25
+3	国芜湖B2	525.0	国芜湖2_	525.0	1		GD	475.1	0.049	522.15
+4	国芜湖B2	525.0	国芜湖_2	115.0	1		GD	0.0	0.000	522.15
+...	...	...	...	...	...	...	...	...	...	...
+32204	浙舟燃__	525.0	浙舟山__	525.0	1	ZS	N	936.5	1.838	526.33
+32205	浙舟三__	525.0	浙舟三_1	20.0		ZS	C	-502.4	0.496	524.44
+32206	浙舟三__	525.0	浙舟三_2	20.0		ZS	C	-502.4	0.495	524.44
+32207	浙舟三__	525.0	浙舟山__	525.0	1	ZS	N	502.4	0.180	524.44
+32208	浙舟三__	525.0	浙舟山__	525.0	2	ZS	N	502.4	0.180	524.44
+```
+ 
+ filedata,B,BQ,BE,T,L,PZ=Bdm.create_Card_Obj()
 
 
 
