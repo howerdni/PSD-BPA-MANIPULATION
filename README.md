@@ -124,9 +124,9 @@
  - X0:str
  - gen():str(返回该卡片的字符串，可以直接复制到bap软件中使用)
  ### create_Card_Obj()
- 选择一个dat文件：
- 返回值如下：
+ - 选择一个dat文件，返回值如下：
  ```return fdat_data,Obj_Bcards,Obj_BQcards,Obj_BEcards,Obj_Tcards,Obj_Lcards,Obj_PZcards```
+ - 注意：其中有发电能力的B卡被放在了```Obj_BQcards```变量中，B卡只包含无发电能力的B卡
  
 
 
