@@ -104,25 +104,25 @@
  ### X0卡：
  - name:X0Card
  - attributes：
- - CardType:str
- - Bus_name1:str
- - Vol_Rank1:str
- - Bus_name2:str
- - Vol_Rank2:str
- - Connect_type:str
- - parallel:str
- - X0:str
- - R0:str
- - gen():str(返回该卡片的字符串，可以直接复制到bap软件中使用)
+   - CardType:str
+   - Bus_name1:str
+   - Vol_Rank1:str
+   - Bus_name2:str
+   - Vol_Rank2:str
+   - Connect_type:str
+   - parallel:str
+   - X0:str
+   - R0:str
+   - gen():str(返回该卡片的字符串，可以直接复制到bap软件中使用)
  ### XR卡：
  - name:XRCard
  - attributes：
- - CardType:str
- - Bus_name1:str
- - Vol_Rank1:str
- - R0:str
- - X0:str
- - gen():str(返回该卡片的字符串，可以直接复制到bap软件中使用)
+   - CardType:str
+   - Bus_name1:str
+   - Vol_Rank1:str
+   - R0:str
+   - X0:str
+   - gen():str(返回该卡片的字符串，可以直接复制到bap软件中使用)
  ### create_Card_Obj()
  - 选择一个dat文件，返回值如下：
  ```return fdat_data,Obj_Bcards,Obj_BQcards,Obj_BEcards,Obj_Tcards,Obj_Lcards,Obj_PZcards```
