@@ -138,6 +138,12 @@
  - 输出范围为220kV电压等级的线路
  ## 使用实例
  - Power_Flow_SUM_GT500()函数的示例（此版本使用python3.11版本，其他版本可能失效）
+ - 如果版本不一致，请建立虚拟环境
+ - ```
+   conda create --name env311 python=3.11
+   conda install ipykernel
+   python -m ipykernel install --user --name env311 --display-name "env311"
+   ```
  ```
 In: import BPA_data_manipulation as Bdm
 In: Bdm.Power_Flow_SUM_GT500()
