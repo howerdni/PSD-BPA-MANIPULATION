@@ -137,7 +137,7 @@
  - 选择pfo文件，输出一个pandas.DataFrame类型的表格，包含线路节点名字，线路电压等级，分区，潮流，网损，电压等信息
  - 输出范围为220kV电压等级的线路
  ## 使用实例
- - Power_Flow_SUM_GT500()函数的示例
+ - Power_Flow_SUM_GT500()函数的示例（此版本使用python3.11版本，其他版本可能失效）
  ```
 In: import BPA_data_manipulation as Bdm
 In: Bdm.Power_Flow_SUM_GT500()
