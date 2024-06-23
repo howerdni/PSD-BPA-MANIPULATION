@@ -158,6 +158,7 @@
 - LD卡、DC卡的使用示例：
 - 使用前，先将BPA_data_manipulation_3.pyd文件放置于juptyer-notebook文件同一路径下
 ```
+In: import BPA_data_manipulation_3 as bd
 In: filedata,B,BQ,BE,T,L,PZ,LD,DC =bd.create_Card_Obj()
 In: X0,XR,M,MF =bd.create_swiCard_Obj
 In: for i in (LD+DC):
