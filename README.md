@@ -1,7 +1,7 @@
 # PSD-BPA-MANIPULATION
 - 为bpa使用者提供基于Python的自动化操作
 - 作者：倪程捷
-- 2024奶奶6月23日更新版本：3.0
+- 2024年6月23日更新版本：3.0
 - 文件：BPA_data_manipulation_3.pyd
 - 新增功能：增加了直流卡：LD卡，DC卡；增加了PSD软件的稳定性文件(后缀为swi)的专门卡：MC卡，MF卡。
 - 关于M系列卡片的含义和填写要求：
