@@ -146,7 +146,7 @@
  - 选择pfo文件，输出一个pandas.DataFrame类型的表格，包含线路节点名字，线路电压等级，分区，潮流，网损，电压等信息
  - 输出范围为220kV电压等级的线路
  ## 使用实例
- - Power_Flow_SUM_GT500()函数的示例（此版本使用python3.11版本，其他版本可能失效）
+ - 此版本使用python3.11版本，其他版本可能失效
  - 如果版本不一致，请建立虚拟环境，在cmd中输入：
  - ```
    conda create --name env311 python=3.11
@@ -155,6 +155,8 @@
    cd ....
    activate env311
    ```
+- LD卡、DC卡的使用示例：
+- 使用前，先将BPA_data_manipulation_3.pyd文件放置于juptyer-notebook文件同一路径下
 ```
 In: filedata,B,BQ,BE,T,L,PZ,LD,DC =bd.create_Card_Obj()
 In: X0,XR,M,MF =bd.create_swiCard_Obj
@@ -195,6 +197,7 @@ Out: 蒙锡换5N 国泰换5N525. 国泰换5F1050 4892.
 ```
 
 ```
+- Power_Flow_SUM_GT500()函数的示例
 In: import BPA_data_manipulation as Bdm
 In: Bdm.Power_Flow_SUM_GT500()
 Out:
