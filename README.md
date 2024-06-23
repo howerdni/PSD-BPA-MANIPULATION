@@ -157,7 +157,7 @@
    ```
 ```
 In: filedata,B,BQ,BE,T,L,PZ,LD,DC =bd.create_Card_Obj()
-In: X0,XR,MC,MF =bd.create_swiCard_Obj
+In: X0,XR,M,MF =bd.create_swiCard_Obj
 In: for i in (LD+DC):
     print(i.gen())
 Out: LD    鄂团林P1210. 沪枫泾P2199.  3000 10.21901.760     R495.  500. 15. 17.     
