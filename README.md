@@ -157,6 +157,7 @@
    ```
 - LD卡、DC卡的使用示例：
 - 使用前，先将BPA_data_manipulation_3.pyd文件放置于juptyer-notebook文件同一路径下
+- LD的使用示例
 ```
 In: import BPA_data_manipulation_3 as bd
 In: filedata,B,BQ,BE,T,L,PZ,LD,DC =bd.create_Card_Obj()
@@ -196,9 +197,8 @@ Out: 蒙锡换5N 国泰换5N525. 国泰换5F1050 4892.
      国布换DN 浙北换N 525. 浙北换NF525. 1333  
      国布换DP 浙北换P 525. 浙北换ZF525. 1333  
 ```
-
-```
 - Power_Flow_SUM_GT500()函数的示例
+```
 In: import BPA_data_manipulation as Bdm
 In: Bdm.Power_Flow_SUM_GT500()
 Out:
