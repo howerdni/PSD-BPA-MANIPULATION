@@ -157,7 +157,6 @@
    ```
 - LD卡、DC卡的使用示例：
 - 使用前，先将BPA_data_manipulation_3.pyd文件放置于juptyer-notebook文件同一路径下
-- LD的使用示例
 ```
 In: import BPA_data_manipulation_3 as bd
 In: filedata,B,BQ,BE,T,L,PZ,LD,DC =bd.create_Card_Obj()
